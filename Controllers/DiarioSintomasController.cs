@@ -4,9 +4,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DiarioDeSintomas.Models;
+using Microsoft.AspNetCore.Authorization; // Necessário para o atributo [Authorize]
 
 namespace DiarioDeSintomas.Controllers
 {
+    [Authorize] // Garante que todas as actions exigem autenticação
     public class DiarioSintomasController : Controller
     {
         private readonly DiarioContext _context;
