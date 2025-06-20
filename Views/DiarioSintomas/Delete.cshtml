@@ -1,0 +1,41 @@
+﻿@model DiarioDeSintomas.Models.DiarioSintoma
+
+@{
+    ViewData["Title"] = "Excluir Registro";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+    <div class="alert alert-danger" role="alert">
+        Tem certeza que deseja excluir este registro?
+    </div>
+    <div class="card mb-3">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.DataHora)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.DataHora)</dd>
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Atividade)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Atividade)</dd>
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Sintoma)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Sintoma)</dd>
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Duracao)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Duracao)</dd>
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.PressaoArterial)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.PressaoArterial)</dd>
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.OutrosSintomas)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.OutrosSintomas)</dd>
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Medicamentos)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Medicamentos)</dd>
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.AlimentacaoHidratacao)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.AlimentacaoHidratacao)</dd>
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Observacoes)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Observacoes)</dd>
+            </dl>
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger">Excluir</button>
+                <a asp-action="Index" class="btn btn-secondary ms-2">Voltar</a>
+            </form>
+        </div>
+    </div>
+</div>
